@@ -1,7 +1,9 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+
 const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown');
+
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = () => {
@@ -84,7 +86,7 @@ const questions = () => {
         {
             type: 'confirm',
             name: 'confirmContribution',
-            message: 'Was this project created solely by you or with help of outside sources?',
+            message: 'Was this project created solely by you?',
             default: true
 
         }, 
@@ -107,22 +109,40 @@ const questions = () => {
             name: 'badges',
             message: 'Please provide any badges you would be to enter:'
         }, 
-])};
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile('README.md', data => {
+])      
+};
 
-    });
-}
+// TODO: Create a function to write README file
+// function writeToFile(fileName, data) {
+//     init();
+// }
 
 // TODO: Create a function to initialize app
 function init() {
- questions();
-}
+    // calling questions function
+questions()
 
+.then(data => {
+    fs.writeFile('README.md', generateMarkdown(data), err => {
+        if(err) throw err;
+
+        console.log('File was created successfully!');
+    })
+});
+}
 
 // Function call to initialize app
 init();
 
 // calling questions function
 // questions()
+
+// .then(data => {
+//     fs.writeFile('README.md', generateMarkdown(data), err => {
+//         if(err) throw err;
+
+//         console.log('File was created successfully!');
+//     })
+// });
+
+
