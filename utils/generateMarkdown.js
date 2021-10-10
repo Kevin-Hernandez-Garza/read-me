@@ -1,7 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  const getBadge = `![badge](https://img.shields.io/badge/license-${license}-blueviolet)`;
+  const getBadge = `![${license}](https://img.shields.io/badge/license-${license}-blueviolet)`;
 
   if (license == 'No License') {
     return "No License"
@@ -46,7 +46,7 @@ function generateMarkdown(data) {
   #### License Link 🎫 
   - ${renderLicenseLink(data.license)}
   
-  ### Badge 🎖
+  ### Badge 🏆
   <br/>
   ${renderLicenseBadge(data.license)}
   

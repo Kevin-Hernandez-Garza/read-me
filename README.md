@@ -1,16 +1,16 @@
-# test
+# y
 
   ## License 
   
   #### License Link 🎫 
   - [License: MIT](https://choosealicense.com/licenses/mit/)
   
-  ### Badge 🎖
+  ### Badge 🏆
   <br/>
-  ![badge](https://img.shields.io/badge/license-MIT-blueviolet)
+  ![MIT](https://img.shields.io/badge/license-MIT-blueviolet)
   
   ## Description 📖
-  - test
+  - y
 
   ## Table of Contents 
 
@@ -20,18 +20,18 @@
   - [Contact 📟](#contact-me/questions)
         
   ## Installation
-  - test
+  - y
   ## Usage
-  - test
+  - y
 
   ## Contribution
   undefined
 
   ## Contact Me/Questions
   
-  - GitHub: [test](https://github.com/test)
+  - GitHub: [y](https://github.com/y)
 
-  - Email: [test](test)
+  - Email: [y](y)
 
 
-  ### © Created with 💜 by test!
+  ### © Created with 💜 by y!
