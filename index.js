@@ -23,9 +23,37 @@ const questions = () => {
         },
 
         {
+            type: 'input', 
+            name: 'name',
+            message: 'What is your name?'
+        },
+
+        {
             type:'input',
             name: 'github',
-            message: 'What is you GitHub username?'
+            message: 'What is you GitHub username? (Required)',
+            validate: userName => {
+                if(userName) {
+                    return true;
+                } else {
+                    console.log('Please enter your GitHub Username!');
+                    return false;
+                }
+            }
+        },
+
+        {
+            type: 'input',
+            name: 'email',
+            message:'What is your email address? (Required)',
+            validate: emailInput => {
+                if (emailInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your email!');
+                    return false;
+                }
+            }
         },
 
         {
@@ -79,7 +107,7 @@ const questions = () => {
             type: 'list',
             name: 'license',
             message: 'Choose a license for you project? (Required)',
-            choices: ['MIT', 'Apache', 'Mozilla', 'GNU', 'None']
+            choices: ['MIT', 'Apache', 'Mozilla', 'GNU', 'No License']
         },
 
 
@@ -102,13 +130,7 @@ const questions = () => {
                     return true;
                 }
             }
-        },
-
-        {
-            type: 'input',
-            name: 'badges',
-            message: 'Please provide any badges you would be to enter:'
-        }, 
+        }
 ])      
 };
 
@@ -120,15 +142,20 @@ const questions = () => {
 // TODO: Create a function to initialize app
 function init() {
     // calling questions function
-questions()
+    questions()
 
-.then(data => {
-    fs.writeFile('README.md', generateMarkdown(data), err => {
-        if(err) throw err;
 
-        console.log('File was created successfully!');
+    // creating  to create README file 
+    .then(data => {
+        fs.writeFile('README.md', generateMarkdown(data), err => {
+            if(err) throw err;
+
+            console.log('File was created successfully!');
+        })
     })
-});
+    .catch(err => {
+        console.log(err);
+    })
 }
 
 // Function call to initialize app
@@ -136,13 +163,5 @@ init();
 
 // calling questions function
 // questions()
-
-// .then(data => {
-//     fs.writeFile('README.md', generateMarkdown(data), err => {
-//         if(err) throw err;
-
-//         console.log('File was created successfully!');
-//     })
-// });
 
 
