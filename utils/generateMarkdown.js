@@ -1,13 +1,32 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  const getBadge = `![${license}](https://img.shields.io/badge/license-${license}-blueviolet)`;
+  // const getBadge = `![Badge](https://img.shields.io/badge/license-${license}-blueviolet/)`;
 
-  if (license == 'No License') {
-    return "No License"
-  } else {
-    return getBadge;
+  // if (license == 'No License') {
+  //   return "No License";
+  // } else {
+  //   return getBadge;
+  // }
+
+  let getBadge;
+
+  if (license == 'MIT') {
+    badgeChosen = "![badge](https://img.shields.io/badge/license-MIT-blueviolet/)";
   }
+  if (license == 'Apache') {
+    badgeChosen = "![badge](https://img.shields.io/badge/license-Apache-blueviolet/)";
+  }
+  if (license == 'Mozilla') {
+    badgeChosen = "![badge](https://img.shields.io/badge/license-Mozilla-blueviolet/)";
+  }
+  if (license == 'GNU') {
+    badgeChosen = "![badge](https://img.shields.io/badge/license-GNU-blueviolet/)";
+  }
+  if (license == 'No License') {
+    badgeChosen = "No Badges 🥲 ";
+  }
+  return badgeChosen;
 }
 
 // TODO: Create a function that returns the license link
@@ -46,7 +65,7 @@ function generateMarkdown(data) {
   #### License Link 🎫 
   - ${renderLicenseLink(data.license)}
   
-  ### Badge 🏆
+  #### Badge 🏆
   <br/>
   ${renderLicenseBadge(data.license)}
   
