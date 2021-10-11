@@ -18,7 +18,7 @@
 
 - [Installation 🛠](#installation)
 - [Usage 🎮](#usage)
-- [Test 🪛](#demo)
+- [Test 🪛](#demo-video)
 - [Contribution 👾](#contribution)
 - [Contact 📟](#contact-me/questions)
 
