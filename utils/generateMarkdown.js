@@ -1,12 +1,11 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  const getBadge = `[badge](https://img.shields.io/badge/license-${license}-blueviolet)`;
 
-  if (license == 'No License') {
-    return "No License"
+  if (license) {
+    return `[![Badge](https://img.shields.io/badge/license-${license}-brightgreen/)]`;
   } else {
-    return getBadge;
+    return "";
   }
 }
 
@@ -41,12 +40,13 @@ function renderLicenseLink(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
-  ## License 🏎
+  ## License 
   
-  - License Link 🎫 
+  #### License Link 🎫 
   - ${renderLicenseLink(data.license)}
   
-  - Badge 🎖
+  #### Badge 🏆
+  <br/>
   ${renderLicenseBadge(data.license)}
   
   ## Description 📖
@@ -57,7 +57,7 @@ function generateMarkdown(data) {
   - [Installation 🛠](#installation)
   - [Usage 🎮](#usage)
   - [Contribution 👾](#contribution) 
-  - [Contact 📟](#contact)
+  - [Contact 📟](#contact-me/questions)
         
   ## Installation
   - ${data.installation}
