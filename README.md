@@ -30,7 +30,9 @@
 
 - This can be used by anyone and everyone in order to create a README.md file without spending too much time thinking on how to structure the file. All you have to do is plug in your information with the “inquirer” prompt questions created through to the command line interface.
 
-## Test
+## Demo Video
+
+https://watch.screencastify.com/v/9hCjYUo2F2ocDPXkD6hV
 
 ## Contribution
 
