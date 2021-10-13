@@ -3,7 +3,7 @@
 function renderLicenseBadge(license) {
 
   if (license) {
-    return `[![Badge](https://img.shields.io/badge/license-${license}-brightgreen/)]`;
+    return `[![Badge](https://img.shields.io/badge/license-${license}-brightgreen/)](https://img.shields.io/badge/license-${license}-brightgreen/)`;
   } else {
     return "";
   }
@@ -46,7 +46,7 @@ function generateMarkdown(data) {
   - ${renderLicenseLink(data.license)}
   
   #### Badge 🏆
-  <br/>
+ 
   ${renderLicenseBadge(data.license)}
   
   ## Description 📖
