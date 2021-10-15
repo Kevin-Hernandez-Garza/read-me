@@ -31,7 +31,7 @@
   
   - GitHub: [Kevin-Hernandez-Garza](https://github.com/Kevin-Hernandez-Garza)
 
-  - Email: [kev.hernandezgarza@gmail.com](kev.hernandezgarza@gmail.com)
+  - Email: [kev.hernandezgarza@gmail.com](mailto:kev.hernandezgarza@gmail.com)
 
 
   ### © Created with 💜 by Kevin Hernandez!
