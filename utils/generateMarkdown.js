@@ -71,7 +71,7 @@ function generateMarkdown(data) {
   
   - GitHub: [${data.github}](https://github.com/${data.github})
 
-  - Email: [${data.email}](${data.email})
+  - Email: [${data.email}](mailto:${data.email})
 
 
   ### © Created with 💜 by ${data.name}!
